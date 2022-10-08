@@ -1,9 +1,9 @@
-local blend = require('rose-pine.util').blend
+local blend = require('pink-sea.util').blend
 
 local M = {}
 
 function M.get(config)
-	local p = require('rose-pine.palette')
+	local p = require('pink-sea.palette')
 
 	local theme = {}
 	local groups = config.groups or {}
@@ -36,14 +36,14 @@ function M.get(config)
 		diffAdded = { link = 'DiffAdd' },
 		diffChanged = { link = 'DiffChange' },
 		diffRemoved = { link = 'DiffDelete' },
-		Directory = { fg = p.foam, bg = p.none },
+		Directory = { fg = p.ice, bg = p.none },
 		-- EndOfBuffer = {},
-		ErrorMsg = { fg = p.love, style = 'bold' },
+		ErrorMsg = { fg = p.kiss, style = 'bold' },
 		FloatBorder = { fg = groups.border },
 		FloatTitle = { fg = p.muted },
 		FoldColumn = { fg = p.muted },
 		Folded = { fg = p.text, bg = groups.panel },
-		IncSearch = { fg = p.base, bg = p.rose },
+		IncSearch = { fg = p.base, bg = p.pink },
 		LineNr = { fg = p.muted },
 		MatchParen = { fg = p.text, bg = p.highlight_med },
 		ModeMsg = { fg = p.subtle },
@@ -52,7 +52,7 @@ function M.get(config)
 		Normal = { fg = p.text, bg = styles.background },
 		NormalFloat = { fg = p.text, bg = styles.float_background },
 		NormalNC = { fg = p.text, bg = styles.nc_background },
-		NvimInternalError = { fg = '#ffffff', bg = p.love },
+		NvimInternalError = { fg = '#ffffff', bg = p.kiss },
 		Pmenu = { fg = p.subtle, bg = styles.float_background },
 		PmenuSbar = { bg = p.highlight_low },
 		PmenuSel = { fg = p.text, bg = p.overlay },
@@ -61,10 +61,10 @@ function M.get(config)
 		-- QuickFixLine = {},
 		-- RedrawDebugNormal = {}
 		RedrawDebugClear = { fg = '#ffffff', bg = p.gold },
-		RedrawDebugComposed = { fg = '#ffffff', bg = p.pine },
-		RedrawDebugRecompose = { fg = '#ffffff', bg = p.love },
+		RedrawDebugComposed = { fg = '#ffffff', bg = p.sea },
+		RedrawDebugRecompose = { fg = '#ffffff', bg = p.kiss },
 		Search = { bg = p.highlight_med },
-		SpecialKey = { fg = p.foam },
+		SpecialKey = { fg = p.ice },
 		SpellBad = { sp = p.subtle, style = 'undercurl' },
 		SpellCap = { sp = p.subtle, style = 'undercurl' },
 		SpellLocal = { sp = p.subtle, style = 'undercurl' },
@@ -85,40 +85,40 @@ function M.get(config)
 		-- Whitespace = {},
 		WildMenu = { link = 'IncSearch' },
 
-		Boolean = { fg = p.rose },
+		Boolean = { fg = p.pink },
 		Character = { fg = p.gold },
 		Comment = { fg = groups.comment, style = styles.italic },
-		Conditional = { fg = p.pine },
+		Conditional = { fg = p.sea },
 		Constant = { fg = p.gold },
-		Debug = { fg = p.rose },
+		Debug = { fg = p.pink },
 		Define = { fg = p.iris },
 		Delimiter = { fg = p.subtle },
-		Error = { fg = p.love },
-		Exception = { fg = p.pine },
+		Error = { fg = p.kiss },
+		Exception = { fg = p.sea },
 		Float = { fg = p.gold },
-		Function = { fg = p.rose },
-		Identifier = { fg = p.rose },
+		Function = { fg = p.pink },
+		Identifier = { fg = p.pink },
 		-- Ignore = {},
 		Include = { fg = p.iris },
-		Keyword = { fg = p.pine },
-		Label = { fg = p.foam },
+		Keyword = { fg = p.sea },
+		Label = { fg = p.ice },
 		Macro = { fg = p.iris },
 		Number = { fg = p.gold },
 		Operator = { fg = p.subtle },
 		PreCondit = { fg = p.iris },
 		PreProc = { fg = p.iris },
-		Repeat = { fg = p.pine },
-		Special = { fg = p.rose },
-		SpecialChar = { fg = p.rose },
+		Repeat = { fg = p.sea },
+		Special = { fg = p.pink },
+		SpecialChar = { fg = p.pink },
 		SpecialComment = { fg = p.iris },
-		Statement = { fg = p.pine },
-		StorageClass = { fg = p.foam },
+		Statement = { fg = p.sea },
+		StorageClass = { fg = p.ice },
 		String = { fg = p.gold },
-		Structure = { fg = p.foam },
-		Tag = { fg = p.rose },
+		Structure = { fg = p.ice },
+		Tag = { fg = p.pink },
 		Todo = { fg = p.iris },
-		Type = { fg = p.foam },
-		Typedef = { fg = p.foam },
+		Type = { fg = p.ice },
+		Typedef = { fg = p.ice },
 		Underlined = { style = 'underline' },
 
 		htmlArg = { fg = p.iris },
@@ -133,7 +133,7 @@ function M.get(config)
 		htmlLink = { fg = groups.link },
 		htmlTag = { fg = p.subtle },
 		htmlTagN = { fg = p.text },
-		htmlTagName = { fg = p.foam },
+		htmlTagName = { fg = p.ice },
 
 		markdownDelimiter = { fg = p.subtle },
 		markdownH1 = { fg = groups.headings.h1, style = 'bold' },
@@ -151,12 +151,12 @@ function M.get(config)
 		markdownLinkText = { fg = groups.link, style = 'underline' },
 		markdownUrl = { link = 'markdownLinkText' },
 
-		mkdCode = { fg = p.foam, style = styles.italic },
-		mkdCodeDelimiter = { fg = p.rose },
-		mkdCodeEnd = { fg = p.foam },
-		mkdCodeStart = { fg = p.foam },
-		mkdFootnotes = { fg = p.foam },
-		mkdID = { fg = p.foam, style = 'underline' },
+		mkdCode = { fg = p.ice, style = styles.italic },
+		mkdCodeDelimiter = { fg = p.pink },
+		mkdCodeEnd = { fg = p.ice },
+		mkdCodeStart = { fg = p.ice },
+		mkdFootnotes = { fg = p.ice },
+		mkdID = { fg = p.ice, style = 'underline' },
 		mkdInlineURL = { fg = groups.link, style = 'underline' },
 		mkdLink = { link = 'mkdInlineURL' },
 		mkdLinkDef = { link = 'mkdInlineURL' },
@@ -203,23 +203,23 @@ function M.get(config)
 		TSCharacter = { link = 'Character' },
 		TSComment = { link = 'Comment' },
 		TSConditional = { link = 'Conditional' },
-		TSConstBuiltin = { fg = p.love },
+		TSConstBuiltin = { fg = p.kiss },
 		-- TSConstMacro = {},
-		TSConstant = { fg = p.foam },
-		TSConstructor = { fg = p.foam },
+		TSConstant = { fg = p.ice },
+		TSConstructor = { fg = p.ice },
 		-- TSEmphasis = {},
 		-- TSError = {},
 		-- TSException = {},
-		TSField = { fg = p.foam },
+		TSField = { fg = p.ice },
 		-- TSFloat = {},
-		TSFuncBuiltin = { fg = p.love },
+		TSFuncBuiltin = { fg = p.kiss },
 		-- TSFuncMacro = {},
-		TSFunction = { fg = p.rose },
-		TSInclude = { fg = p.pine },
-		TSKeyword = { fg = p.pine },
+		TSFunction = { fg = p.pink },
+		TSInclude = { fg = p.sea },
+		TSKeyword = { fg = p.sea },
 		-- TSKeywordFunction = {},
 		TSKeywordOperator = { fg = p.subtle },
-		TSLabel = { fg = p.foam },
+		TSLabel = { fg = p.ice },
 		-- TSLiteral = {},
 		-- TSMethod = {},
 		-- TSNamespace = {},
@@ -235,11 +235,11 @@ function M.get(config)
 		-- TSRepeat = {},
 		-- TSStrike = {},
 		TSString = { link = 'String' },
-		TSStringEscape = { fg = p.pine },
+		TSStringEscape = { fg = p.sea },
 		-- TSStringRegex = {},
 		TSStringSpecial = { link = 'TSString' },
 		-- TSSymbol = {},
-		TSTag = { fg = p.foam },
+		TSTag = { fg = p.ice },
 		TSTagDelimiter = { fg = p.subtle },
 		TSText = { fg = p.text },
 		TSTitle = { fg = groups.headings.h1, style = 'bold' },
@@ -248,7 +248,7 @@ function M.get(config)
 		TSURI = { fg = groups.link },
 		-- TSUnderline = {},
 		TSVariable = { fg = p.text, style = styles.italic },
-		TSVariableBuiltin = { fg = p.love },
+		TSVariableBuiltin = { fg = p.kiss },
 
 		-- vim.lsp.buf.document_highlight()
 		LspReferenceText = { bg = p.highlight_med },
@@ -262,18 +262,18 @@ function M.get(config)
 		-- romgrk/barbar.nvim
 		BufferCurrent = { fg = p.text, bg = p.overlay },
 		BufferCurrentIndex = { fg = p.text, bg = p.overlay },
-		BufferCurrentMod = { fg = p.foam, bg = p.overlay },
+		BufferCurrentMod = { fg = p.ice, bg = p.overlay },
 		BufferCurrentSign = { fg = p.subtle, bg = p.overlay },
 		BufferCurrentTarget = { fg = p.gold, bg = p.overlay },
 		BufferInactive = { fg = p.subtle },
 		BufferInactiveIndex = { fg = p.subtle },
-		BufferInactiveMod = { fg = p.foam },
+		BufferInactiveMod = { fg = p.ice },
 		BufferInactiveSign = { fg = p.muted },
 		BufferInactiveTarget = { fg = p.gold },
 		BufferTabpageFill = { fg = groups.background, bg = groups.background },
 		BufferVisible = { fg = p.subtle },
 		BufferVisibleIndex = { fg = p.subtle },
-		BufferVisibleMod = { fg = p.foam },
+		BufferVisibleMod = { fg = p.ice },
 		BufferVisibleSign = { fg = p.muted },
 		BufferVisibleTarget = { fg = p.gold },
 
@@ -287,20 +287,20 @@ function M.get(config)
 
 		-- mvllow/modes.nvim
 		ModesCopy = { bg = p.gold },
-		ModesDelete = { bg = p.love },
-		ModesInsert = { bg = p.foam },
+		ModesDelete = { bg = p.kiss },
+		ModesInsert = { bg = p.ice },
 		ModesVisual = { bg = p.iris },
 
 		-- kyazdani42/nvim-tree.lua
 		NvimTreeEmptyFolderName = { fg = p.muted },
-		NvimTreeFileDeleted = { fg = p.love },
-		NvimTreeFileDirty = { fg = p.rose },
+		NvimTreeFileDeleted = { fg = p.kiss },
+		NvimTreeFileDirty = { fg = p.pink },
 		NvimTreeFileMerge = { fg = p.iris },
-		NvimTreeFileNew = { fg = p.foam },
-		NvimTreeFileRenamed = { fg = p.pine },
+		NvimTreeFileNew = { fg = p.ice },
+		NvimTreeFileRenamed = { fg = p.sea },
 		NvimTreeFileStaged = { fg = p.iris },
 		NvimTreeFolderIcon = { fg = p.subtle },
-		NvimTreeFolderName = { fg = p.foam },
+		NvimTreeFolderName = { fg = p.ice },
 		NvimTreeGitDeleted = { fg = groups.git_delete },
 		NvimTreeGitDirty = { fg = groups.git_dirty },
 		NvimTreeGitIgnored = { fg = groups.git_ignore },
@@ -318,11 +318,11 @@ function M.get(config)
 
 		-- folke/which-key.nvim
 		WhichKey = { fg = p.iris },
-		WhichKeyGroup = { fg = p.foam },
+		WhichKeyGroup = { fg = p.ice },
 		WhichKeySeparator = { fg = p.subtle },
 		WhichKeyDesc = { fg = p.gold },
 		WhichKeyFloat = { bg = groups.panel },
-		WhichKeyValue = { fg = p.rose },
+		WhichKeyValue = { fg = p.pink },
 
 		-- luka-reineke/indent-blankline.nvim
 		IndentBlanklineChar = { fg = p.muted },
@@ -338,12 +338,12 @@ function M.get(config)
 		CmpItemKindInterface = { fg = p.gold },
 		CmpItemKindMethod = { fg = p.iris },
 		CmpItemKindSnippet = { fg = p.iris },
-		CmpItemKindVariable = { fg = p.foam },
+		CmpItemKindVariable = { fg = p.ice },
 
 		-- TimUntersberger/neogit
-		NeogitDiffAddHighlight = { fg = p.foam, bg = p.highlight_med },
+		NeogitDiffAddHighlight = { fg = p.ice, bg = p.highlight_med },
 		NeogitDiffContextHighlight = { bg = p.highlight_low },
-		NeogitDiffDeleteHighlight = { fg = p.love, bg = p.highlight_med },
+		NeogitDiffDeleteHighlight = { fg = p.kiss, bg = p.highlight_med },
 		NeogitHunkHeader = { bg = p.highlight_low },
 		NeogitHunkHeaderHighlight = { bg = p.highlight_low },
 
@@ -355,10 +355,10 @@ function M.get(config)
 		VimwikiHeader4 = { fg = groups.headings.h4, style = 'bold' },
 		VimwikiHeader5 = { fg = groups.headings.h5, style = 'bold' },
 		VimwikiHeader6 = { fg = groups.headings.h6, style = 'bold' },
-		VimwikiHeaderChar = { fg = p.pine },
+		VimwikiHeaderChar = { fg = p.sea },
 		VimwikiLink = { fg = groups.link, style = 'underline' },
 		VimwikiList = { fg = p.iris },
-		VimwikiNoExistsLink = { fg = p.love },
+		VimwikiNoExistsLink = { fg = p.kiss },
 
 		-- nvim-neorg/neorg
 		NeorgHeading1Prefix = { fg = groups.headings.h1, style = 'bold' },
@@ -376,14 +376,14 @@ function M.get(config)
 		NeorgMarkerTitle = { fg = p.text, style = 'bold' },
 
 		-- tami5/lspsaga.nvim (fork of glepnir/lspsaga.nvim)
-		DefinitionCount = { fg = p.rose },
-		DefinitionIcon = { fg = p.rose },
-		DefintionPreviewTitle = { fg = p.rose, style = 'bold' },
+		DefinitionCount = { fg = p.pink },
+		DefinitionIcon = { fg = p.pink },
+		DefintionPreviewTitle = { fg = p.pink, style = 'bold' },
 		LspFloatWinBorder = { fg = groups.border },
 		LspFloatWinNormal = { bg = groups.background },
 		LspSagaAutoPreview = { fg = p.subtle },
 		LspSagaCodeActionBorder = { fg = groups.border },
-		LspSagaCodeActionContent = { fg = p.foam },
+		LspSagaCodeActionContent = { fg = p.ice },
 		LspSagaCodeActionTitle = { fg = p.gold, style = 'bold' },
 		LspSagaCodeActionTruncateLine = { link = 'LspSagaCodeActionBorder' },
 		LspSagaDefPreviewBorder = { fg = groups.border },
@@ -394,12 +394,12 @@ function M.get(config)
 		LspSagaFinderSelection = { fg = p.gold },
 		LspSagaHoverBorder = { fg = groups.border },
 		LspSagaLspFinderBorder = { fg = groups.border },
-		LspSagaRenameBorder = { fg = p.pine },
-		LspSagaRenamePromptPrefix = { fg = p.love },
+		LspSagaRenameBorder = { fg = p.sea },
+		LspSagaRenamePromptPrefix = { fg = p.kiss },
 		LspSagaShTruncateLine = { link = 'LspSagaSignatureHelpBorder' },
-		LspSagaSignatureHelpBorder = { fg = p.pine },
-		ReferencesCount = { fg = p.rose },
-		ReferencesIcon = { fg = p.rose },
+		LspSagaSignatureHelpBorder = { fg = p.sea },
+		ReferencesCount = { fg = p.pink },
+		ReferencesIcon = { fg = p.pink },
 		SagaShadow = { bg = p.overlay },
 		TargetWord = { fg = p.iris },
 
@@ -407,23 +407,23 @@ function M.get(config)
 		LspSignatureActiveParameter = { bg = p.overlay },
 
 		-- rlane/pounce.nvim
-		PounceAccept = { fg = p.love, bg = p.highlight_high },
+		PounceAccept = { fg = p.kiss, bg = p.highlight_high },
 		PounceAcceptBest = { fg = p.base, bg = p.gold },
 		PounceGap = { link = 'Search' },
 		PounceMatch = { link = 'Search' },
 
 		-- nvim-telescope/telescope.nvim
 		TelescopeBorder = { fg = groups.border },
-		TelescopeMatching = { fg = p.rose },
+		TelescopeMatching = { fg = p.pink },
 		TelescopeNormal = { fg = p.subtle },
 		TelescopePromptNormal = { fg = p.text },
 		TelescopePromptPrefix = { fg = p.subtle },
 		TelescopeSelection = { fg = p.text, bg = p.overlay },
-		TelescopeSelectionCaret = { fg = p.rose, bg = p.overlay },
+		TelescopeSelectionCaret = { fg = p.pink, bg = p.overlay },
 		TelescopeTitle = { fg = p.subtle },
 
 		-- rcarriga/nvim-notify
-		NotifyINFOBorder = { fg = p.foam },
+		NotifyINFOBorder = { fg = p.ice },
 		NotifyINFOTitle = { link = 'NotifyINFOBorder' },
 		NotifyINFOIcon = { link = 'NotifyINFOBorder' },
 		NotifyWARNBorder = { fg = p.gold },
@@ -435,7 +435,7 @@ function M.get(config)
 		NotifyTRACEBorder = { fg = p.iris },
 		NotifyTRACETitle = { link = 'NotifyTRACEBorder' },
 		NotifyTRACEIcon = { link = 'NotifyTRACEBorder' },
-		NotifyERRORBorder = { fg = p.love },
+		NotifyERRORBorder = { fg = p.kiss },
 		NotifyERRORTitle = { link = 'NotifyERRORBorder' },
 		NotifyERRORIcon = { link = 'NotifyERRORBorder' },
 
@@ -447,40 +447,40 @@ function M.get(config)
 		DapUIWatchesValue = { link = 'DapUIThread' },
 		DapUIBreakpointsInfo = { link = 'DapUIThread' },
 		DapUIBreakpointsCurrentLine = { fg = p.gold, style = 'bold' },
-		DapUIWatchesEmpty = { fg = p.love },
+		DapUIWatchesEmpty = { fg = p.kiss },
 		DapUIWatchesError = { link = 'DapUIWatchesEmpty' },
 		DapUIBreakpointsDisabledLine = { fg = p.muted },
 		DapUISource = { fg = p.iris },
-		DapUIBreakpointsPath = { fg = p.foam },
+		DapUIBreakpointsPath = { fg = p.ice },
 		DapUIScope = { link = 'DapUIBreakpointsPath' },
 		DapUILineNumber = { link = 'DapUIBreakpointsPath' },
 		DapUIBreakpointsLine = { link = 'DapUIBreakpointsPath' },
 		DapUIFloatBorder = { link = 'DapUIBreakpointsPath' },
 		DapUIStoppedThread = { link = 'DapUIBreakpointsPath' },
 		DapUIDecoration = { link = 'DapUIBreakpointsPath' },
-		DapUIModifiedValue = { fg = p.foam, style = 'bold' },
+		DapUIModifiedValue = { fg = p.ice, style = 'bold' },
 
 		-- glepnir/dashboard-nvim
-		DashboardShortcut = { fg = p.love },
-		DashboardHeader = { fg = p.pine },
+		DashboardShortcut = { fg = p.kiss },
+		DashboardHeader = { fg = p.sea },
 		DashboardCenter = { fg = p.gold },
 		DashboardFooter = { fg = p.iris },
 	}
 
 	vim.g.terminal_color_0 = p.overlay -- black
 	vim.g.terminal_color_8 = p.subtle -- bright black
-	vim.g.terminal_color_1 = p.love -- red
-	vim.g.terminal_color_9 = p.love -- bright red
-	vim.g.terminal_color_2 = p.pine -- green
-	vim.g.terminal_color_10 = p.pine -- bright green
+	vim.g.terminal_color_1 = p.kiss -- red
+	vim.g.terminal_color_9 = p.kiss -- bright red
+	vim.g.terminal_color_2 = p.sea -- green
+	vim.g.terminal_color_10 = p.sea -- bright green
 	vim.g.terminal_color_3 = p.gold -- yellow
 	vim.g.terminal_color_11 = p.gold -- bright yellow
-	vim.g.terminal_color_4 = p.foam -- blue
-	vim.g.terminal_color_12 = p.foam -- bright blue
+	vim.g.terminal_color_4 = p.ice -- blue
+	vim.g.terminal_color_12 = p.ice -- bright blue
 	vim.g.terminal_color_5 = p.iris -- magenta
 	vim.g.terminal_color_13 = p.iris -- bright magenta
-	vim.g.terminal_color_6 = p.rose -- cyan
-	vim.g.terminal_color_14 = p.rose -- bright cyan
+	vim.g.terminal_color_6 = p.pink -- cyan
+	vim.g.terminal_color_14 = p.pink -- bright cyan
 	vim.g.terminal_color_7 = p.text -- white
 	vim.g.terminal_color_15 = p.text -- bright white
 
