@@ -2,19 +2,19 @@
 --- https://github.com/NTBBloodbath/galaxyline.nvim
 ---
 --- @usage
---- local highlights = require('rose-pine.plugins.galaxyline')
+--- local highlights = require('prettyinpink.plugins.galaxyline')
 
-local p = require('rose-pine.palette')
+local p = require('prettyinpink.palette')
 
 return {
 	bg = p.surface,
 	fg = p.text,
 	fg_alt = p.subtle,
 	yellow = p.gold,
-	cyan = p.rose,
-	green = p.pine,
+	cyan = p.pink,
+	green = p.sea,
 	orange = p.muted,
 	magenta = p.iris,
-	blue = p.foam,
-	red = p.love,
+	blue = p.ice,
+	red = p.kiss,
 }
